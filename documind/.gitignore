@@ -1,0 +1,26 @@
+# Secret API Keys (KABHI PUSH NAHI HONI CHAHIYE)
+.env
+*.env
+.env.*
+
+# Local ChromaDB Vector Store & Uploaded Documents
+chroma_db/
+uploads/
+*.pdf
+
+# Python Cache & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+venv/
+env/
+.conda/
+
+# Evaluation Reports
+evaluation/results/*.csv
+evaluation/results/*.json
+
+# IDE Settings
+.vscode/
+.idea/

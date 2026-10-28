@@ -1,0 +1,15 @@
+
+[
+  {
+    "question": "What is the main purpose of this document?",
+    "ground_truth": "Replace this with the correct answer based on your PDF."
+  },
+  {
+    "question": "What are the key findings described in the document?",
+    "ground_truth": "Replace this with the key findings from your PDF."
+  },
+  {
+    "question": "What recommendations does the document provide?",
+    "ground_truth": "Replace this with the recommendations stated in your PDF."
+  }
+]

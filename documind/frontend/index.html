@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0e1d">
+  <title>DocuMind — Document Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/ui/style.css">
+  <script src="/ui/app.js" defer></script>
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <header class="topbar">
+    <a class="brand" href="/ui/index.html">
+      <span class="brand-mark">D</span>
+      <span>DocuMind <small>Document intelligence</small></span>
+    </a>
+    <span class="status"><i></i> RAG assistant online</span>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar glass">
+      <h2>Documents</h2>
+      <p class="muted">Upload a PDF to make its contents searchable.</p>
+
+      <form id="upload-form">
+        <label class="upload-box" for="pdf-file">
+          <span class="upload-icon">↑</span>
+          <strong>Choose a PDF</strong>
+          <span id="file-name">or drop it here</span>
+        </label>
+        <input id="pdf-file" type="file" accept=".pdf,application/pdf" required>
+        <button id="upload-button" class="button secondary" type="submit">
+          <span class="btn-label">Upload and index</span>
+        </button>
+      </form>
+      <p id="upload-status" class="message" role="status"></p>
+
+      <div class="sidebar-note">
+        <strong>How it works</strong>
+        <p>DocuMind finds the most relevant passages in your PDFs, then writes an answer from them.</p>
+      </div>
+      <a class="docs-link" href="/docs" target="_blank" rel="noreferrer">Open API documentation ↗</a>
+    </aside>
+
+    <section class="workspace glass">
+      <div class="intro">
+        <h1>Knowledge, without the digging.</h1>
+        <p class="muted">Ask a question about the PDFs you've indexed.</p>
+      </div>
+
+      <section id="chat" class="chat" aria-live="polite">
+        <article class="welcome">
+          <div class="orb" aria-hidden="true"><span></span><span></span><span></span></div>
+          <h2>What would you like to know?</h2>
+          <p>Upload a PDF, then ask a question grounded in its content.</p>
+          <button class="suggestion" type="button" data-question="Summarize the main points in my documents.">
+            <span>Summarize the main points</span><b>↗</b>
+          </button>
+          <button class="suggestion" type="button" data-question="What are the most important findings?">
+            <span>Find the important findings</span><b>↗</b>
+          </button>
+        </article>
+      </section>
+
+      <form id="question-form" class="composer">
+        <label class="sr-only" for="question">Your question</label>
+        <textarea id="question" rows="2" maxlength="2000"
+          placeholder="Ask a question about your documents…" required></textarea>
+        <div class="composer-footer">
+          <span class="muted">Answers may be incomplete. Check the cited sources. Enter to send, Shift+Enter for a new line.</span>
+          <button id="ask-button" class="button primary" type="submit">Ask DocuMind ↗</button>
+        </div>
+      </form>
+      <p id="query-status" class="message" role="status"></p>
+    </section>
+  </main>
+  <footer>DocuMind · Retrieval-Augmented Generation demo</footer>
+</body>
+</html>

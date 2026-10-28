@@ -1,0 +1,19 @@
+{
+  "cases": [
+    {
+      "question": "What is the company's annual leave policy?",
+      "expected_keywords": ["annual leave"],
+      "expected_source": "employee_handbook.pdf"
+    },
+    {
+      "question": "How do employees report a security incident?",
+      "expected_keywords": ["security"],
+      "expected_source": "security_policy.pdf"
+    },
+    {
+      "question": "What is the policy for operating a submarine on Mars?",
+      "expected_keywords": [],
+      "expected_source": null
+    }
+  ]
+}
