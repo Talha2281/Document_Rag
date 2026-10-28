@@ -24,3 +24,6 @@ evaluation/results/*.json
 # IDE Settings
 .vscode/
 .idea/
+data/chroma/
+*.sqlite3
+*.bin
