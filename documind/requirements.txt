@@ -26,3 +26,5 @@ google-genai
 langchain-community<0.3
 langchain-google-vertexai
 langchain-google-community[google-docai]
+gradio
+uvicorn
